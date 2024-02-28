@@ -20,19 +20,33 @@
     <script defer src="src/js/index.js"></script>
 </head>
 
-<body class="bg-slate-100 text-neutral-900 font-sans">
-    <header class="fixed w-full flex justify-center bg-custom-teal shadow">
+<body class="bg-slate-100 text-neutral-900 text-lg font-sans">
+    <header class="fixed w-full z-50 flex justify-center bg-custom-teal shadow">
         <div class="w-full max-w-screen-xl flex justify-between">
             <div class="px-4 py-2">
                 <h1 class="text-slate-100 font-bold text-4xl">Albert Rowett</h1>
-                <h2 class="text-slate-100 text-lg">Full Stack Software Developer</h2>
+                <h2 class="text-slate-100">Full Stack Software Developer</h2>
             </div>
             <nav class="flex flex-col sm:flex-row items-center justify-center gap-x-3 px-4 bg-custome-teal-light">
-                <a href="#" class="text-lg hover:underline">About</a>
-                <a href="#" class="text-lg hover:underline">Projects</a>
-                <a href="#" class="text-lg hover:underline">Contact</a>
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Projects</a>
+                <a href="#" class="hover:underline">Contact</a>
             </nav>
         </div>
     </header>
+    <main class="relative top-28 min-[372px]:top-[5.25rem] flex justify-center">
+        <section id="about" class="w-full max-w-screen-xl p-4">
+            <h3 class="w-1/2 border-b-2 border-custom-teal text-custom-teal font-bold">About</h3>
+            <div class="flex flex-col sm:flex-row-reverse">
+                <div class="basis-1/2 flex justify-center mt-3">
+                    <img src="images/albertRowettPhoto.jpg" alt="Albert Rowett in a pale pink shirt" class="w-64 h-64" />
+                </div>
+                <div class="basis-1/2 mt-3">
+                    <p class="mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quam autem neque aliquam minus qui? Tempora nulla, maxime recusandae ipsam magnam cum at impedit! Laboriosam, officia porro. Nisi, eos iure.</p>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti, quas ratione autem unde dolorum at qui recusandae quidem omnis velit consequatur sapiente labore illo, ex fugit, eius excepturi dolorem accusamus.</p>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
