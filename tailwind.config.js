@@ -5,7 +5,7 @@ module.exports = {
         extend: {
             colors: {
                 'custom-teal': '#20b2aa',
-                'custome-teal-light': '#c7ecea'
+                'custom-teal-light': '#c7ecea'
             }
         }
     },

@@ -18,25 +18,26 @@
     <link rel="apple-touch-icon" href="images/favicon.png">
 
     <script defer src="src/js/index.js"></script>
+    <script src="https://kit.fontawesome.com/27a7576e1a.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="bg-slate-100 text-neutral-900 text-lg font-sans">
-    <header class="fixed w-full z-50 flex justify-center bg-custom-teal shadow">
+<body class="bg-slate-100 text-neutral-900 font-sans">
+    <header class="fixed top-0 w-full z-50 flex justify-center bg-custom-teal shadow">
         <div class="w-full max-w-screen-xl flex justify-between">
             <div class="px-4 py-2">
                 <h1 class="text-slate-100 font-bold text-4xl">Albert Rowett</h1>
-                <h2 class="text-slate-100">Full Stack Software Developer</h2>
+                <h2 class="text-slate-100 text-lg">Full Stack Software Developer</h2>
             </div>
-            <nav class="flex flex-col sm:flex-row items-center justify-center gap-x-3 px-4 bg-custome-teal-light">
+            <nav class="flex flex-col sm:flex-row items-center justify-center gap-x-3 px-4 bg-custom-teal-light">
                 <a href="#" class="hover:underline">About</a>
                 <a href="#" class="hover:underline">Projects</a>
                 <a href="#" class="hover:underline">Contact</a>
             </nav>
         </div>
     </header>
-    <main class="relative top-28 min-[372px]:top-[5.25rem] flex flex-col justify-center">
+    <main class="w-full flex flex-col items-center mt-28 min-[366px]:mt-[5.25rem]">
         <section id="about" class="w-full max-w-screen-xl p-4 pb-0">
-            <h3 class="w-1/2 border-b-2 border-custom-teal text-custom-teal font-bold">About</h3>
+            <h3 class="w-1/2 border-b-2 border-custom-teal text-custom-teal text-lg font-bold">About</h3>
             <div class="flex flex-col sm:flex-row-reverse">
                 <div class="basis-1/2 flex justify-center mt-3">
                     <img src="images/albertRowettPhoto.jpg" alt="Albert Rowett in a pale pink shirt" class="w-64 h-64" />
@@ -47,9 +48,20 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="w-full max-w-screen-xl p-4 pb-0">
-            <h3 class="w-1/2 border-b-2 border-custom-teal text-custom-teal font-bold">Projects</h3>
+        <section id="projects" class="w-full max-w-screen-xl p-4">
+            <h3 class="w-1/2 border-b-2 border-custom-teal text-custom-teal text-lg font-bold">Projects</h3>
         </section>
     </main>
+    <footer class="flex justify-center bg-custom-teal-light">
+        <div id="contact" class="w-full max-w-screen-xl px-4 py-2">
+            <h3 class="w-1/2 border-b-2 border-neutral-900 text-lg font-bold">Contact</h3>
+            <nav class="flex flex-col gap-y-2 sm:flex-row gap-x-8 mt-2 font-medium">
+                <a href="mailto:albertRowett@gmail.com"><i class="fa-solid fa-envelope"></i> albertRowett@gmail.com</a>
+                <a href="tel:+4550309205"><i class="fa-solid fa-phone"></i> (45) 50 30 92 05</a>
+                <a href="https://github.com/albertRowett" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-github"></i> albertRowett</a>
+                <a href="https://linkedin.com/in/albertRowett" target="_blank" rel="noreferrer noopener"><i class="fa-brands fa-linkedin"></i> albertRowett</a>
+            </nav>
+        </div>
+    </footer>
 </body>
 </html>
