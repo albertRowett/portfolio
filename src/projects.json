@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "type": "testType",
+            "name": "testName",
+            "githubLink": "https://github.com/albertRowett",
+            "siteLink": "https://github.com/albertRowett",
+            "image": "images/albertRowettPhoto.jpg",
+            "imageAltText": "testAltText",
+            "description": "testDescription"
+        },
+        {
+            "type": "testType2",
+            "name": "testName2",
+            "githubLink": "https://github.com/albertRowett",
+            "siteLink": "https://github.com/albertRowett",
+            "image": "images/albertRowettPhoto.jpg",
+            "imageAltText": "testAltText2",
+            "description": "testDescription2"
+        }
+    ]
+}
