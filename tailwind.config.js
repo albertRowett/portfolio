@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         "albert-sans": ["Albert Sans", "sans-serif"],
       },
+      spacing: {
+        23: "5.75rem",
+      },
     },
   },
   plugins: [],
