@@ -24,7 +24,7 @@
   <body class="font-albert-sans text-neutral-900">
     <header class="fixed top-0 z-50 flex w-full justify-center bg-white text-teal-800 shadow">
       <div class="mx-4 flex w-full max-w-screen-2xl justify-between sm:mx-8 lg:mx-16">
-        <div class="my-3 text-teal-800">
+        <div class="my-3">
           <h1 class="text-4xl font-bold">Albert Rowett</h1>
           <h2 class="text-xl font-medium">Full Stack Developer</h2>
         </div>
@@ -37,7 +37,18 @@
     </header>
     <!-- mt and h classes combine to create hero section that fills rest of viewport -->
     <section id="hero" class="mt-23 flex h-[calc(100vh-5.75rem)] justify-center bg-teal-50">
-      <div class="mx-4 w-full max-w-screen-2xl sm:mx-8 lg:mx-16"></div>
+      <div class="mx-4 flex w-full max-w-screen-2xl flex-col items-center justify-center gap-8 sm:mx-8 lg:mx-16">
+        <img
+          src="./images/hero.jpg"
+          alt="Albert smiling in a pale blue shirt"
+          class="w-4/5 rounded-full border-4 border-solid border-white shadow"
+        />
+        <div class="font min-w-4/5 flex flex-col items-end gap-4 text-3xl font-medium italic text-teal-800">
+          <p>Former Chemist</p>
+          <p>Budding Developer</p>
+          <p>Your New Colleague?</p>
+        </div>
+      </div>
     </section>
     <section id="logos"></section>
     <section id="about"></section>
