@@ -10,6 +10,10 @@ module.exports = {
         23: "5.75rem",
         "4/5": "80%",
       },
+      borderWidth: {
+        5: "5px",
+        6: "6px",
+      },
     },
   },
   plugins: [],
