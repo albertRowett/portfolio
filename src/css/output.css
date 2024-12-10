@@ -803,6 +803,26 @@ video {
   }
 }
 
+@media (min-width: 768px){
+  .md\:gap-6{
+    gap: 1.5rem;
+  }
+
+  .md\:gap-12{
+    gap: 3rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-5xl{
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
 @media (min-width: 1024px){
   .lg\:mx-16{
     margin-left: 4rem;
