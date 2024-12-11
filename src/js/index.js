@@ -1,3 +1,22 @@
+// Hero section: tagline transition
+const lines = document.querySelectorAll("[data-tagline] p");
+
+function transition(line) {
+  line.style.transform = "translateX(0px)";
+  line.style.opacity = "1";
+}
+
+window.addEventListener("load", () => {
+  transition(lines[0]);
+});
+
+for (let i = 0; i < lines.length - 1; i++) {
+  lines[i].addEventListener("transitionend", () => {
+    transition(lines[i + 1]);
+  });
+}
+
+// Projects section: projects population
 fetch("projects.json")
   .then((response) => response.json())
   .then((data) => {
