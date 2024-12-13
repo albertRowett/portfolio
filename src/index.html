@@ -44,10 +44,10 @@
         <img
           src="./images/hero.jpg"
           alt="Albert smiling in a pale blue shirt"
-          class="xl:border-5 2xl:border-6 sm:max-lg:max-w-140 z-10 w-4/5 rounded-full border-4 border-solid border-white shadow lg:w-2/5"
+          class="z-10 w-4/5 rounded-full border-4 border-solid border-white shadow sm:max-lg:max-w-140 lg:w-2/5 xl:border-5 2xl:border-6"
         />
         <div
-          class="min-w-4/5 md:min-w-140 flex flex-col items-end gap-4 text-3xl font-medium italic text-teal-800 sm:gap-6 sm:text-4xl md:gap-8 md:text-5xl lg:min-w-fit lg:justify-evenly lg:gap-0 lg:py-8 xl:text-6xl 2xl:text-7xl"
+          class="flex min-w-4/5 flex-col items-end gap-4 text-3xl font-medium italic text-teal-800 sm:gap-6 sm:text-4xl md:min-w-140 md:gap-8 md:text-5xl lg:min-w-fit lg:justify-evenly lg:gap-0 lg:py-8 xl:text-6xl 2xl:text-7xl"
           data-tagline
         >
           <p class="linear -translate-x-1/3 opacity-0 transition delay-300 duration-1000">Former Chemist</p>
@@ -58,7 +58,7 @@
     </section>
     <section id="logos" class="flex justify-center bg-white">
       <div
-        class="py-7.5 2xl:py-15 mx-4 flex w-full max-w-screen-2xl flex-wrap justify-center gap-x-5 gap-y-2.5 text-3xl text-teal-800 sm:mx-8 md:gap-6 md:py-9 md:text-4xl lg:mx-16 xl:gap-8 xl:py-12 xl:text-5xl 2xl:gap-10 2xl:text-6xl"
+        class="mx-4 flex w-full max-w-screen-2xl flex-wrap justify-center gap-x-5 gap-y-2.5 py-7.5 text-3xl text-teal-800 sm:mx-8 md:gap-6 md:py-9 md:text-4xl lg:mx-16 xl:gap-8 xl:py-12 xl:text-5xl 2xl:gap-10 2xl:py-15 2xl:text-6xl"
       >
         <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer"
           ><i class="devicon-html5-plain-wordmark"></i
@@ -94,7 +94,46 @@
         ></a>
       </div>
     </section>
-    <section id="about"></section>
+    <section id="about" class="flex scroll-mt-23 justify-center bg-teal-50 py-8 md:py-10 xl:py-12 2xl:py-16">
+      <div class="mx-4 flex w-full max-w-screen-2xl flex-wrap items-center justify-around gap-6 sm:mx-8 lg:mx-16">
+        <div class="lg:max-w-2/3">
+          <h3 class="mb-4 text-3xl font-bold text-teal-800 md:mb-5 md:text-4xl xl:mb-6 xl:text-5xl">About Me</h3>
+          <div class="flex flex-col gap-4">
+            <p class="text-lg font-medium">
+              I used to be a chemist and now I'm a software developer. But why did I switch?
+            </p>
+            <p>
+              Well, I knew from my PhD that I love breaking down and tackling complex problems, as well as evaluating
+              different problem-solving strategies and collaborating with others to share ideas.
+            </p>
+            <p>
+              The project management, problem-solving and interpersonal skills I'd developed felt like a natural fit for
+              software development. The only problem was: I didn't know how to code. To fix that, I enrolled in a
+              bootcamp at
+              <a
+                href="https://io-academy.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-800 underline hover:opacity-50"
+                >iO Academy</a
+              >
+              and started learning the technical skills I needed.
+            </p>
+            <p>
+              Since then, I've built on these foundations through personal projects and now feel confident about
+              applying my skills professionally. My research background means I can bring a different perspective, along
+              with a natural eye for detail, and an openness to ask questions and get things wrong.
+            </p>
+            <p>
+              Now based in Copenhagen, I'm seeking a full-stack or back-end developer role, but I'm also open to
+              internships that'll help me reach that goal, while allowing me to further develop my skills and contribute
+              to a team.
+            </p>
+          </div>
+        </div>
+        <div class="h-96 w-64 bg-white"></div>
+      </div>
+    </section>
     <section id="projects"></section>
     <footer id="contact" class="flex justify-center bg-teal-100">
       <div id="contact" class="w-full max-w-screen-xl px-4 py-2">
