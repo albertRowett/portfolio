@@ -95,9 +95,11 @@
       </div>
     </section>
     <section id="about" class="flex scroll-mt-23 justify-center bg-teal-50 py-8 md:py-10 xl:py-12 2xl:py-16">
-      <div class="mx-4 flex w-full max-w-screen-2xl flex-wrap items-center justify-around gap-6 sm:mx-8 lg:mx-16">
+      <div class="mx-4 flex max-w-screen-2xl flex-wrap items-center justify-around gap-8 sm:mx-8 lg:mx-16">
         <div class="lg:max-w-2/3">
-          <h3 class="mb-4 text-3xl font-bold text-teal-800 md:mb-5 md:text-4xl xl:mb-6 xl:text-5xl">About Me</h3>
+          <h3 class="mb-4 text-center text-3xl font-bold text-teal-800 md:mb-5 md:text-4xl xl:mb-6 xl:text-5xl">
+            About Me
+          </h3>
           <div class="flex flex-col gap-4">
             <p class="text-lg font-medium">
               I used to be a chemist and now I'm a software developer. But why did I switch?
@@ -131,8 +133,9 @@
             </p>
           </div>
         </div>
-        <div class="rotate-2 bg-white shadow">
-          <!-- Image padding and defined paragraph height create Polaroid border of correct relative size -->
+        <!-- mt class vertically centers image with paragraph text on desktop screens -->
+        <div class="lg:mt-18 rotate-2 bg-white shadow">
+          <!-- Image padding and defined paragraph height create Polaroid border of correct size -->
           <img src="./images/about.png" alt="Albert standing in a lab in a white lab coat" class="h-64 w-64 p-4 pb-0" />
           <p class="h-18.5 leading-18.5 font-caveat text-center text-2xl">Me in my previous life</p>
         </div>
