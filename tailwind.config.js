@@ -17,6 +17,9 @@ module.exports = {
         "2/3": "66.667%",
         "4/5": "80%",
       },
+      colors: {
+        "teal-800-opacity-50": "#87adab",
+      },
       borderWidth: {
         5: "5px",
         6: "6px",

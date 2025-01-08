@@ -660,6 +660,10 @@ video {
   width: 100%;
 }
 
+.w-\[560px\]{
+  width: 560px;
+}
+
 .min-w-4\/5{
   min-width: 80%;
 }
@@ -732,6 +736,10 @@ video {
 
 .gap-6{
   gap: 1.5rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-x-4{
