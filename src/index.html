@@ -134,10 +134,10 @@
           </div>
         </div>
         <!-- mt class vertically centers image with paragraph text on desktop screens -->
-        <div class="lg:mt-18 rotate-2 bg-white shadow">
+        <div class="rotate-2 bg-white shadow lg:mt-18">
           <!-- Image padding and defined paragraph height create Polaroid border of correct size -->
           <img src="./images/about.png" alt="Albert standing in a lab in a white lab coat" class="h-64 w-64 p-4 pb-0" />
-          <p class="h-18.5 leading-18.5 font-caveat text-center text-2xl">Me in my previous life</p>
+          <p class="h-18.5 text-center font-caveat text-2xl leading-18.5">Me in my previous life</p>
         </div>
       </div>
     </section>
@@ -147,25 +147,60 @@
           Projects
         </h3>
         <div class="flex flex-wrap justify-center gap-6">
-          <div class="w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140">
+          <div class="w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140" data-project>
             <div class="mb-3 flex flex-col gap-1.5 sm:flex-row sm:justify-center">
               <h4 class="text-xl font-bold">JavaScript Game</h4>
               <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">- </span>Blackjack</h5>
             </div>
-            <div class="relative float-left mb-3 mr-4 w-64 rounded bg-teal-800 p-0.5">
-              <img src="./images/blackjack/blackjack.png" class="rounded-sm" />
+            <div class="relative float-left mb-3 mr-4 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800">
+              <img
+                src="./images/blackjack/blackjack-0.png"
+                alt="Blackjack title screen"
+                class="absolute rounded-sm transition duration-1000"
+                data-project-img
+              />
+              <img
+                src="./images/blackjack/blackjack-1.png"
+                alt="Wagering"
+                class="absolute rounded-sm opacity-0 transition duration-1000"
+                data-project-img
+              />
+              <img
+                src="./images/blackjack/blackjack-2.png"
+                alt="Playing a split hand"
+                class="absolute rounded-sm opacity-0 transition duration-1000"
+                data-project-img
+              />
+              <img
+                src="./images/blackjack/blackjack-3.png"
+                alt="A hand result"
+                class="absolute rounded-sm opacity-0 transition duration-1000"
+                data-project-img
+              />
+              <img
+                src="./images/blackjack/blackjack-4.png"
+                alt="Cash out confirmation"
+                class="absolute rounded-sm opacity-0 transition duration-1000"
+                data-project-img
+              />
+              <img
+                src="./images/blackjack/blackjack-5.png"
+                alt="Game end"
+                class="absolute rounded-sm opacity-0 transition duration-1000"
+                data-project-img
+              />
               <a
                 href="https://blackjack.2023-bertr.dev.io-academy.uk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:bg-teal-800-opacity-50 absolute bottom-0 left-0 rounded-bl rounded-tr bg-teal-800 px-1 text-xl text-white"
+                class="absolute bottom-0 left-0 rounded-bl-sm rounded-tr bg-teal-800 px-1 text-xl text-white hover:bg-teal-800-opacity-50"
                 ><i class="fa-solid fa-arrow-up-right-from-square"></i
               ></a>
               <a
                 href="https://github.com/albertRowett/blackjack"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="hover:bg-teal-800-opacity-50 absolute bottom-0 right-0 rounded-br rounded-tl bg-teal-800 px-1 text-xl text-white"
+                class="absolute bottom-0 right-0 rounded-br-sm rounded-tl bg-teal-800 px-1 text-xl text-white hover:bg-teal-800-opacity-50"
                 ><i class="fa-brands fa-github"></i
               ></a>
             </div>
