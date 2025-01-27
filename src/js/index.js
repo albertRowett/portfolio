@@ -33,49 +33,115 @@ for (let i = 0; i < lines.length - 1; i++) {
 //     });
 //   });
 
-// Projects section: image slideshows
+// PROJECTS SECTION: IMAGE SLIDESHOWS
 const projects = document.querySelectorAll("[data-project]");
+let slideshows = {};
 
 projects.forEach((project) => {
-  const images = project.querySelectorAll("[data-project-img]");
-  const noOfImages = images.length;
-  let currentIndex = 0;
-  let interval = null;
-  let timeout = null;
+  const projectName = project.dataset.project;
+  const projectImages = project.querySelectorAll("[data-project-img]");
 
-  function startSlideshow() {
-    if (interval === null) {
-      showNextImage();
-      interval = setInterval(showNextImage, 2000);
-    }
+  slideshows[projectName] = {
+    images: projectImages,
+    noOfImages: projectImages.length,
+    currentImage: 0,
+    interval: null,
+    timeout: null,
+  };
+});
 
-    if (timeout !== null) {
-      clearTimeout(timeout);
-      timeout = null;
-    }
+const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)");
+
+function initInteraction() {
+  if (isTouchDevice.matches) {
+    const slideFrames = document.querySelectorAll("[data-slide-frame]");
+    const viewportHeight = window.innerHeight;
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const frameHeight = document.querySelector("[data-slide-frame]").offsetHeight;
+
+    const observerOptions = {
+      // Options combine for check of whether top of slide frame is between middle of viewport and bottom of header
+      rootMargin: `-${headerHeight}px 0px -${viewportHeight / 2 - frameHeight}px 0px`,
+      threshold: 1,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const projectName = entry.target.dataset.slideFrame;
+
+        if (entry.isIntersecting) {
+          startSlideshow(projectName);
+        } else {
+          stopSlideshow(projectName);
+        }
+      });
+    }, observerOptions);
+
+    slideFrames.forEach((slideFrame) => {
+      observer.observe(slideFrame);
+    });
+  } else {
+    // i.e. non-touch device
+    projects.forEach((project) => {
+      const projectName = project.dataset.project;
+
+      project.addEventListener("mouseenter", () => {
+        startSlideshow(projectName);
+      });
+      project.addEventListener("focusin", () => {
+        startSlideshow(projectName);
+      });
+      project.addEventListener("mouseleave", () => {
+        stopSlideshow(projectName);
+      });
+      project.addEventListener("focusout", () => {
+        // Delay prevents slideshow stopping and restarting when focus changed within a project
+        slideshows[projectName].timeout = setTimeout(() => {
+          stopSlideshow(projectName);
+        }, 10);
+      });
+    });
+  }
+}
+
+function startSlideshow(projectName) {
+  const project = slideshows[projectName];
+
+  if (project.interval === null) {
+    showNextImage(project);
+    project.interval = setInterval(() => {
+      showNextImage(project);
+    }, 2000);
   }
 
-  function showNextImage() {
-    images[currentIndex].classList.add("opacity-0");
-    currentIndex = (currentIndex + 1) % noOfImages;
-    images[currentIndex].classList.remove("opacity-0");
+  if (project.timeout !== null) {
+    clearTimeout(project.timeout);
+    project.timeout = null;
   }
+}
 
-  function stopSlideshow() {
-    clearInterval(interval);
-    interval = null;
+function showNextImage(project) {
+  project.images[project.currentImage].classList.add("opacity-0");
+  project.currentImage = (project.currentImage + 1) % project.noOfImages;
+  project.images[project.currentImage].classList.remove("opacity-0");
+}
 
-    if (currentIndex !== 0) {
-      images[currentIndex].classList.add("opacity-0");
-      currentIndex = 0;
-      images[currentIndex].classList.remove("opacity-0");
-    }
+function stopSlideshow(projectName) {
+  const project = slideshows[projectName];
+
+  clearInterval(project.interval);
+  project.interval = null;
+
+  if (project.currentImage !== 0) {
+    project.images[project.currentImage].classList.add("opacity-0");
+    project.currentImage = 0;
+    project.images[project.currentImage].classList.remove("opacity-0");
   }
+}
 
-  project.addEventListener("mouseenter", startSlideshow);
-  project.addEventListener("focusin", startSlideshow);
-  project.addEventListener("mouseleave", stopSlideshow);
-  project.addEventListener("focusout", () => {
-    timeout = setTimeout(stopSlideshow, 10); // Delay prevents slideshow stopping and restarting when focus changed within a project
-  });
+initInteraction();
+
+isTouchDevice.addEventListener("change", () => {
+  // Ensures interactions re-initialised if device type changed
+  window.location.reload();
 });
