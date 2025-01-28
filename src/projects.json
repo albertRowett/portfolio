@@ -1,22 +1,75 @@
 {
   "projects": [
     {
-      "type": "testType",
-      "name": "testName",
-      "githubLink": "https://github.com/albertRowett",
-      "siteLink": "https://github.com/albertRowett",
-      "image": "images/albertRowettPhoto.jpg",
-      "imageAltText": "testAltText",
-      "description": "testDescription"
+      "nickname": "grand-tour-gc-riders",
+      "type": "Collection App",
+      "name": "Grand Tour GC Riders",
+      "siteLink": "https://grand-tour-gc-riders.2023-bertr.dev.io-academy.uk/",
+      "githubLink": "https://github.com/albertRowett/grand-tour-gc-riders",
+      "images": [
+        "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-0.png",
+        "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-1.png",
+        "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-2.png",
+        "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-3.png",
+        "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-4.png"
+      ],
+      "imageAltTexts": [
+        "Riders on the index page",
+        "'Add Rider' page",
+        "Riders on the 'Retired' page",
+        "'Nationality = Danish' filter applied on the index page",
+        "Jonas Vingegaard's 'Edit Rider' page"
+      ],
+      "description": [
+        "A database-backed web app to showcase professional cycling’s top general classification (GC) riders.",
+        "As part of my bootcamp course, I developed the app without a framework to focus on my understanding of back-end fundamentals, using PHP for server-side logic and MariaDB for database management.",
+        "I revisited the project a year later to implement additional features and was able to significantly improve the codebase’s robustness and maintainability, demonstrating my growth as a developer."
+      ]
     },
     {
-      "type": "testType2",
-      "name": "testName2",
-      "githubLink": "https://github.com/albertRowett",
-      "siteLink": "https://github.com/albertRowett",
-      "image": "images/albertRowettPhoto.jpg",
-      "imageAltText": "testAltText2",
-      "description": "testDescription2"
+      "nickname": "canucks-roster-api",
+      "type": "RESTful API",
+      "name": "Vancouver Canucks Roster API",
+      "siteLink": "https://canucks-roster-api.2023-bertr.dev.io-academy.uk/",
+      "githubLink": "https://github.com/albertRowett/canucks-roster-api",
+      "images": [
+        "./images/projects/canucks-roster-api/canucks-roster-api-0.svg",
+        "./images/projects/canucks-roster-api/canucks-roster-api-1.png"
+      ],
+      "imageAltTexts": ["ER diagram of the database", "API documentation"],
+      "description": [
+        "An API tracking the roster of the Vancouver Canucks ice hockey team.",
+        "I used PHP and Laravel to structure the application with design patterns, manage the database and handle complex model relationships.",
+        "I implemented HTTP tests to ensure reliability and maintainability, and I created a front-end Blade template to host the API’s documentation."
+      ]
+    },
+    {
+      "nickname": "blackjack",
+      "type": "JavaScript Game",
+      "name": "Blackjack",
+      "siteLink": "https://blackjack.2023-bertr.dev.io-academy.uk/",
+      "githubLink": "https://github.com/albertRowett/blackjack",
+      "images": [
+        "./images/projects/blackjack/blackjack-0.png",
+        "./images/projects/blackjack/blackjack-1.png",
+        "./images/projects/blackjack/blackjack-2.png",
+        "./images/projects/blackjack/blackjack-3.png",
+        "./images/projects/blackjack/blackjack-4.png",
+        "./images/projects/blackjack/blackjack-5.png"
+      ],
+      "imageAltTexts": [
+        "Blackjack title screen",
+        "Wagering",
+        "Playing a split hand",
+        "A hand result",
+        "Cash out confirmation",
+        "Game end"
+      ],
+      "description": [
+        "A fun, free-to-play online blackjack game.",
+        "I used HTML and TailwindCSS to create the interface and plain JavaScript for game logic and DOM manipulation.",
+        "I decoupled game logic from the visuals and added features incrementally, starting with basic mechanics and progressing to more complex features, such as wagering, splitting and doubling down."
+      ]
     }
   ]
 }
