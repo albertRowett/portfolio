@@ -16,43 +16,124 @@ for (let i = 0; i < lines.length - 1; i++) {
   });
 }
 
-// Projects section: projects population
-// fetch("projects.json")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     data.projects.forEach((project) => {
-//       let content = "<ul>";
-//       content += "<li>Project Type: " + project.type + "</li>";
-//       content += "<li>Project Name: " + project.name + "</li>";
-//       content += '<img src="' + project.image + '" alt="' + project.imageAltText + '" class="w-32 h-32" />';
-//       content += "<p>Project description: " + project.description + "</p>";
-//       content += '<a href="' + project.githubLink + '">GitHub</a><br>';
-//       content += '<a href="' + project.siteLink + '">Site</a>';
-//       content += "</ul>";
-//       document.querySelector(".projects").innerHTML += content;
-//     });
-//   });
+// PROJECTS SECTION
+fetch("./projects.json")
+  .then((response) => response.json())
+  .then((data) => {
+    insertProjects(data);
+    initSlideshows();
+  });
 
-// PROJECTS SECTION: IMAGE SLIDESHOWS
-const projects = document.querySelectorAll("[data-project]");
-let slideshows = {};
+function insertProjects(data) {
+  const projectsContainer = document.querySelector("[data-projects-container");
+  const projects = data.projects;
 
-projects.forEach((project) => {
-  const projectName = project.dataset.project;
-  const projectImages = project.querySelectorAll("[data-project-img]");
+  projectsContainer.innerHTML = projects
+    .map((project) => {
+      return `
+        <div class="w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140" data-project="${project.nickname}">
+          <div class="mb-3 flex flex-col gap-1.5 sm:flex-row sm:justify-center">
+            <h4 class="text-xl font-bold">${project.type}</h4>
+            <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">- </span>${project.name}</h5>
+          </div>
+          <div
+            class="relative float-left mb-3 mr-4 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800"
+            data-slide-frame="${project.nickname}"
+          >
+            ${imagesHTML(project)}
+            <a
+              href="${project.siteLink}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="absolute bottom-0 left-0 rounded-bl-sm rounded-tr bg-teal-800 px-1 text-xl text-white hover:bg-teal-800-opacity-50"
+              ><i class="fa-solid fa-arrow-up-right-from-square"></i
+            ></a>
+            <a
+              href="${project.githubLink}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="absolute bottom-0 right-0 rounded-br-sm rounded-tl bg-teal-800 px-1 text-xl text-white hover:bg-teal-800-opacity-50"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </div>
+          <div>
+            ${descriptionHTML(project)}
+          </div>
+        </div>
+      `;
+    })
+    .join("");
+}
 
-  slideshows[projectName] = {
-    images: projectImages,
-    noOfImages: projectImages.length,
-    currentImage: 0,
-    interval: null,
-    timeout: null,
-  };
-});
+function imagesHTML(project) {
+  return project.images
+    .map((image, i) => {
+      if (i === 0) {
+        return `
+          <!-- Explicit height needed for first image to ensure correct offsetHeight in JS -->
+          <img
+            src="${image}"
+            alt="${project.imageAltTexts[i]}"
+            class="absolute h-43 rounded-sm transition duration-1000"
+            data-project-img
+          />
+        `;
+      } else {
+        return `
+          <img
+            src="${image}"
+            alt="${project.imageAltTexts[i]}"
+            class="absolute rounded-sm opacity-0 transition duration-1000"
+            data-project-img
+          />
+        `;
+      }
+    })
+    .join("");
+}
+
+function descriptionHTML(project) {
+  const noOfSentences = project.description.length;
+
+  return project.description
+    .map((sentence, i) => {
+      if (i !== noOfSentences - 1) {
+        return `<p class="mb-3">${sentence}</p>`;
+      } else {
+        return `<p>${sentence}</p>`;
+      }
+    })
+    .join("");
+}
 
 const isTouchDevice = window.matchMedia("(hover: none) and (pointer: coarse)");
+let slideshows = {};
 
-function initInteraction() {
+function initSlideshows() {
+  const projects = document.querySelectorAll("[data-project]");
+
+  projects.forEach((project) => {
+    const projectName = project.dataset.project;
+    const projectImages = project.querySelectorAll("[data-project-img]");
+
+    slideshows[projectName] = {
+      images: projectImages,
+      noOfImages: projectImages.length,
+      currentImage: 0,
+      interval: null,
+      timeout: null,
+    };
+  });
+
+  initInteraction(projects);
+
+  isTouchDevice.addEventListener("change", () => {
+    // Ensures interactions re-initialised if device type changed
+    window.location.reload();
+  });
+}
+
+function initInteraction(projects) {
   if (isTouchDevice.matches) {
     const slideFrames = document.querySelectorAll("[data-slide-frame]");
     const viewportHeight = window.innerHeight;
@@ -138,10 +219,3 @@ function stopSlideshow(projectName) {
     project.images[project.currentImage].classList.remove("opacity-0");
   }
 }
-
-initInteraction();
-
-isTouchDevice.addEventListener("change", () => {
-  // Ensures interactions re-initialised if device type changed
-  window.location.reload();
-});
