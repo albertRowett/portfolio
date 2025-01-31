@@ -37,7 +37,7 @@ function insertProjects(data) {
             <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">- </span>${project.name}</h5>
           </div>
           <div
-            class="relative float-left mb-3 mr-4 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800"
+            class="relative float-left mb-2 mr-3 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800 sm:mb-0"
             data-slide-frame="${project.nickname}"
           >
             ${imagesHTML(project)}

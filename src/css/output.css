@@ -667,6 +667,14 @@ video {
   margin-bottom: 1.125rem;
 }
 
+.mr-3{
+  margin-right: 0.75rem;
+}
+
+.mb-2{
+  margin-bottom: 0.5rem;
+}
+
 .flex{
   display: flex;
 }
@@ -1152,6 +1160,30 @@ video {
   .sm\:mx-8{
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+
+  .sm\:mt-3{
+    margin-top: 0.75rem;
+  }
+
+  .sm\:mt-2{
+    margin-top: 0.5rem;
+  }
+
+  .sm\:mt-1{
+    margin-top: 0.25rem;
+  }
+
+  .sm\:mb-0{
+    margin-bottom: 0px;
+  }
+
+  .sm\:mb-1{
+    margin-bottom: 0.25rem;
+  }
+
+  .sm\:mb-2{
+    margin-bottom: 0.5rem;
   }
 
   .sm\:inline{

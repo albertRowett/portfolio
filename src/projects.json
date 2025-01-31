@@ -21,9 +21,9 @@
         "Jonas Vingegaard's 'Edit Rider' page"
       ],
       "description": [
-        "A database-backed web app to showcase professional cycling’s top general classification (GC) riders.",
-        "As part of my bootcamp course, I developed the app without a framework to focus on my understanding of back-end fundamentals, using PHP for server-side logic and MariaDB for database management.",
-        "I revisited the project a year later to implement additional features and was able to significantly improve the codebase’s robustness and maintainability, demonstrating my growth as a developer."
+        "A database-backed web app showcasing professional cycling’s top general classification (GC) riders.",
+        "As part of my bootcamp, I developed this app without a framework to focus on my understanding of back-end fundamentals, using PHP for server-side logic and MariaDB for database management.",
+        "Revisiting the project a year later, I was able to significantly improve the codebase’s robustness and maintainability, demonstrating my growth as a developer."
       ]
     },
     {
