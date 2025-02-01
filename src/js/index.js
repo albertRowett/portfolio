@@ -1,4 +1,4 @@
-// Hero section: tagline transition
+// HERO SECTION
 const lines = document.querySelectorAll("[data-tagline] p");
 
 function transition(line) {
@@ -34,7 +34,7 @@ function insertProjects(data) {
         <div class="w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140" data-project="${project.nickname}">
           <div class="mb-3 flex flex-col gap-1.5 sm:flex-row sm:justify-center">
             <h4 class="text-xl font-bold">${project.type}</h4>
-            <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">- </span>${project.name}</h5>
+            <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">– </span>${project.name}</h5>
           </div>
           <div
             class="relative float-left mb-2 mr-3 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800 sm:mb-0"
