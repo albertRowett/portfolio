@@ -936,11 +936,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-red-50{
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 242 242 / var(--tw-bg-opacity));
-}
-
 .bg-gradient-to-b{
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
@@ -967,11 +962,6 @@ video {
 .py-7{
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
-}
-
-.py-7\.5{
-  padding-top: 1.875rem;
-  padding-bottom: 1.875rem;
 }
 
 .py-8{
@@ -1196,13 +1186,13 @@ video {
     gap: 2rem;
   }
 
-  .md\:gap-y-10{
-    row-gap: 2.5rem;
-  }
-
   .md\:gap-x-6{
     -moz-column-gap: 1.5rem;
          column-gap: 1.5rem;
+  }
+
+  .md\:gap-y-10{
+    row-gap: 2.5rem;
   }
 
   .md\:py-10{
@@ -1263,10 +1253,6 @@ video {
   .lg\:min-w-fit{
     min-width: -moz-fit-content;
     min-width: fit-content;
-  }
-
-  .lg\:max-w-2\/3{
-    max-width: 66.667%;
   }
 
   .lg\:max-w-full{
