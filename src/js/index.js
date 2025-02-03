@@ -31,13 +31,13 @@ function insertProjects(data) {
   projectsContainer.innerHTML = projects
     .map((project) => {
       return `
-        <div class="w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140" data-project="${project.nickname}">
-          <div class="mb-3 flex flex-col gap-1.5 sm:flex-row sm:justify-center">
+        <div class="w-4/5 min-w-72 rounded-2xl bg-teal-50 p-4 shadow sm:w-140" data-project="${project.nickname}">
+          <div class="mb-3 flex flex-col items-center gap-1.5 sm:flex-row sm:justify-center">
             <h4 class="text-xl font-bold">${project.type}</h4>
             <h5 class="text-lg sm:text-xl"><span class="hidden sm:inline">– </span>${project.name}</h5>
           </div>
           <div
-            class="relative float-left mb-2 mr-3 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800 sm:mb-0"
+            class="relative mx-auto mb-3 h-44 w-64 rounded border-2 border-teal-800 bg-teal-800 sm:float-left sm:mb-0 sm:mr-4"
             data-slide-frame="${project.nickname}"
           >
             ${imagesHTML(project)}
