@@ -1,5 +1,7 @@
-# website-template
+# Professional Portfolio Site
 
-This template can be used as the basis of new websites.
+This is my professional portfolio site, built with HTML, TailwindCSS and JavaScript.
 
-You can download the zip file, unzip/decompress it, copy the whole folder and rename it.
+The site showcases my work and experience as a full stack developer, featuring an 'About Me' section, an overview of my projects and my contact details.
+
+[Live site](2023-bertr.dev.io-academy.uk)
