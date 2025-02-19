@@ -22,8 +22,8 @@
       ],
       "description": [
         "A database-backed web app showcasing professional cycling’s top general classification (GC) riders.",
-        "As part of my bootcamp, I developed this app without a framework to focus on my understanding of back-end fundamentals, using PHP for server-side logic and MariaDB for database management.",
-        "Revisiting the project a year later, I was able to significantly improve the codebase’s robustness and maintainability, demonstrating my growth as a developer."
+        "As part of my bootcamp, I developed this app without a framework to focus on core back-end principles, using OOP in PHP for server-side logic and writing manual SQL queries.",
+        "Revisiting the project a year later, I restructured the codebase’s logic and SQL queries, improving readability and reusability – demonstrating my growth in following best practices."
       ]
     },
     {
@@ -39,8 +39,8 @@
       "imageAltTexts": ["ER diagram of the database", "API documentation"],
       "description": [
         "An API tracking the roster of the Vancouver Canucks ice hockey team.",
-        "I used PHP and Laravel to structure the application with design patterns, manage the database and handle complex model relationships.",
-        "I implemented HTTP tests to ensure reliability and maintainability, and I created a front-end Blade template to host the API’s documentation."
+        "Written in PHP, I used Laravel’s MVC architecture with Eloquent ORM to define and manage complex model relationships, ensuring maintainable and scalable database queries.",
+        "I implemented HTTP tests to ensure reliability and maintainability, and created a Blade template to display the API’s documentation on the front end."
       ]
     },
     {
@@ -66,9 +66,9 @@
         "Game end"
       ],
       "description": [
-        "A fun, free-to-play online blackjack game.",
-        "I used HTML and TailwindCSS to create the interface and plain JavaScript for game logic and DOM manipulation.",
-        "I decoupled game logic from the visuals and added features incrementally, starting with basic mechanics and progressing to more complex features, such as wagering, splitting and doubling down."
+        "A dynamic, free-to-play online blackjack game.",
+        "I used HTML/Tailwind CSS for the interface and plain JavaScript for logic, focusing on writing efficient game functions while keeping the codebase simple and lightweight.",
+        "I decoupled game mechanics from the visuals and added features incrementally. This occasionally necessitated refactoring, but resulted in cleaner, more maintainable code."
       ]
     }
   ]
