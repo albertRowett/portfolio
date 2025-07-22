@@ -122,48 +122,60 @@
     </section>
     <section id="about" class="flex scroll-mt-23 justify-center bg-teal-50 py-9 md:py-10 xl:py-12">
       <div class="mx-4 grid max-w-screen-2xl grid-cols-1 gap-x-8 sm:mx-8 lg:mx-16 lg:grid-cols-[auto_auto] xl:gap-x-10">
-        <!-- mb = half of line-height -->
-        <h3 class="mb-4.5 text-center text-3xl font-bold text-teal-800 md:mb-5 md:text-4xl xl:mb-6 xl:text-5xl">
-          About Me
-        </h3>
-        <!-- Div intentionally left empty to align heading with text -->
-        <div></div>
-        <div class="mb-4.5 h-fit w-fit rotate-2 place-self-center bg-white shadow lg:order-4 lg:mb-0">
-          <!-- Image padding and defined paragraph height create Polaroid border of correct size -->
-          <img src="./images/about.png" alt="Albert standing in a lab in a white lab coat" class="h-64 w-64 p-4 pb-0" />
-          <p class="h-18.5 text-center font-caveat text-2xl leading-18.5">Me in my previous life</p>
+        <div class="flex flex-col justify-center">
+          <!-- mb = half of line-height -->
+          <h3 class="mb-4.5 text-center text-3xl font-bold text-teal-800 md:mb-5 md:text-4xl xl:mb-6 xl:text-5xl">
+            About Me
+          </h3>
+          <!-- <lg: visible; >=lg: hidden  -->
+          <div class="mb-4.5 h-fit w-fit rotate-2 place-self-center bg-white shadow lg:hidden">
+            <!-- Image padding and defined paragraph height create Polaroid border -->
+            <img
+              src="./images/about.png"
+              alt="Albert standing in a lab in a white lab coat"
+              class="h-64 w-64 p-4 pb-0"
+            />
+            <p class="h-18.5 text-center font-caveat text-2xl leading-18.5">Me in my previous life</p>
+          </div>
+          <div class="flex flex-col gap-4 self-start lg:order-3">
+            <p class="text-lg font-medium">
+              I'm a former chemist turned software developer with a love of solving complex problems.
+            </p>
+            <p>
+              After completing a PhD in organic chemistry, I transitioned into tech via a bootcamp at
+              <a
+                href="https://io-academy.uk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-800 underline hover:opacity-50"
+                >iO Academy</a
+              >
+              and have been building ever since—developing and deploying web apps independently, and more recently, as
+              part of the team at the proptech startup
+              <a
+                href="https://proprty.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-teal-800 underline hover:opacity-50"
+                >proprty.ai</a
+              >.
+            </p>
+            <p>
+              Based in Copenhagen, I'm currently looking for a full-stack, back-end or front-end developer role in a
+              collaborative team where I can keep learning and growing.
+            </p>
+          </div>
         </div>
-        <div class="flex flex-col gap-4 self-start lg:order-3">
-          <p class="text-lg font-medium">
-            I used to be a chemist and now I'm a software developer. How did I get here?
-          </p>
-          <p>
-            Well, I knew from my PhD that I love breaking down and tackling complex problems, as well as evaluating
-            different problem-solving strategies and collaborating with others to share ideas.
-          </p>
-          <p>
-            The project management, problem-solving and interpersonal skills I'd developed felt like a natural fit for
-            software development. The only problem was: I didn't know how to code. To fix that, I enrolled in a bootcamp
-            at
-            <a
-              href="https://io-academy.uk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-teal-800 underline hover:opacity-50"
-              >iO Academy</a
-            >
-            and started learning the technical skills I needed.
-          </p>
-          <p>
-            Since then, I've built on those foundations through independent projects and now feel confident about
-            applying my skills professionally. Coming from a research background, I can bring a distinct approach to
-            problem-solving, complemented by a natural eye for detail, and an openness to ask questions and get things
-            wrong.
-          </p>
-          <p>
-            Now based in Copenhagen, I'm seeking a full-stack or back-end developer role, but I'm also open to
-            internships that help me reach that goal while learning new skills and contributing as part of a team.
-          </p>
+        <div class="hidden lg:block">
+          <div class="mb-4.5 h-fit w-fit rotate-2 place-self-center bg-white shadow lg:order-4 lg:mb-0">
+            <!-- Image padding and defined paragraph height create Polaroid border -->
+            <img
+              src="./images/about.png"
+              alt="Albert standing in a lab in a white lab coat"
+              class="h-64 w-64 p-4 pb-0"
+            />
+            <p class="h-18.5 text-center font-caveat text-2xl leading-18.5">Me in my previous life</p>
+          </div>
         </div>
       </div>
     </section>
