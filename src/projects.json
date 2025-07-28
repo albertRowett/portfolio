@@ -23,7 +23,7 @@
       "description": [
         "A database-backed web app showcasing professional cycling's top general classification (GC) riders.",
         "As part of my bootcamp, I developed this app without a framework to focus on core back-end principles, using OOP in PHP for server-side logic and writing manual SQL queries.",
-        "Revisiting the project a year later, I restructured the codebase's logic and SQL queries, improving readability and reusability—demonstrating my growth in following best practices."
+        "Revisiting the project a year later, I restructured the codebase's logic and SQL queries, improving readability and reusability – demonstrating my growth in following best practices."
       ]
     },
     {
