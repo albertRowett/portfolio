@@ -4,7 +4,7 @@
       "nickname": "grand-tour-gc-riders",
       "type": "Collection App",
       "name": "Grand Tour GC Riders",
-      "siteLink": "https://grand-tour-gc-riders.2023-bertr.dev.io-academy.uk/",
+      "siteLink": "https://grand-tour-gc-riders.infinityfree.me/",
       "githubLink": "https://github.com/albertRowett/grand-tour-gc-riders",
       "images": [
         "./images/projects/grand-tour-gc-riders/grand-tour-gc-riders-0.png",
@@ -30,7 +30,7 @@
       "nickname": "canucks-roster-api",
       "type": "RESTful API",
       "name": "Vancouver Canucks Roster API",
-      "siteLink": "https://canucks-roster-api.2023-bertr.dev.io-academy.uk/",
+      "siteLink": "https://canucks-roster-api.infinityfree.me/",
       "githubLink": "https://github.com/albertRowett/canucks-roster-api",
       "images": [
         "./images/projects/canucks-roster-api/canucks-roster-api-0.svg",
@@ -47,7 +47,7 @@
       "nickname": "blackjack",
       "type": "JavaScript Game",
       "name": "Blackjack",
-      "siteLink": "https://blackjack.2023-bertr.dev.io-academy.uk/",
+      "siteLink": "https://blackjack-albertrowett.vercel.app/",
       "githubLink": "https://github.com/albertRowett/blackjack",
       "images": [
         "./images/projects/blackjack/blackjack-0.png",
